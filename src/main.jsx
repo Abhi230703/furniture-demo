@@ -142,18 +142,18 @@ function App() {
       <main>
         <section
           id="home"
-          className="relative isolate overflow-hidden bg-[#f6f3ed] pt-[76px]">
-          <div className="absolute inset-y-0 right-0 -z-10 hidden w-[49%] bg-slate-800 lg:block" />
+          className="relative isolate overflow-hidden bg-[#efe5d5] pt-[76px]">
+          <div className="wood-grain absolute inset-y-0 right-0 -z-10 hidden w-[48%] lg:block" />
+          <div className="absolute -left-20 top-36 -z-10 size-72 rounded-full border border-[#d8bd91]" />
           <div className="mx-auto grid min-h-[670px] max-w-7xl items-center gap-12 px-5 py-16 lg:grid-cols-[1.04fr_.96fr] lg:px-8 lg:py-20">
             <div className="max-w-2xl">
               <p className="eyebrow">
                 <span /> Designed locally. Built to last.
               </p>
-              <h1 className="mt-5 font-display text-4xl leading-[1.07] text-slate-800 sm:text-5xl lg:text-[58px]">
-                Transforming spaces with <em>precision-crafted</em> modular
-                furniture.
+              <h1 className="mt-5 font-display text-4xl leading-[1.04] text-[#35251c] sm:text-5xl lg:text-[60px]">
+                Furniture with a <em className="font-normal text-[#945f22]">sense of place.</em>
               </h1>
-              <p className="mt-6 max-w-xl text-base leading-7 text-slate-600 sm:text-lg">
+              <p className="mt-6 max-w-xl text-base leading-7 text-[#715d4b] sm:text-lg">
                 Custom modular kitchens, designer wardrobes, office workspaces
                 and TV units — thoughtfully made for homes and businesses in
                 Ichalkaranji.
@@ -168,7 +168,7 @@ function App() {
                   <Ruler size={18} /> Book free measurement
                 </button>
               </div>
-              <div className="mt-12 grid max-w-xl grid-cols-2 gap-y-5 border-t border-stone-300 pt-7 sm:grid-cols-4">
+              <div className="mt-12 grid max-w-xl grid-cols-2 gap-y-5 border-t border-[#cdb68e] pt-7 sm:grid-cols-4">
                 {[
                   ["10+", "Years experience"],
                   ["100%", "Custom designs"],
@@ -176,17 +176,18 @@ function App() {
                   ["Local", "Manufacturing"],
                 ].map(([value, label]) => (
                   <div key={label}>
-                    <strong className="block text-xl text-slate-800">
+                    <strong className="block font-display text-2xl text-[#3b281c]">
                       {value}
                     </strong>
-                    <span className="text-xs text-slate-500">{label}</span>
+                    <span className="text-xs text-[#7b6859]">{label}</span>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="relative mx-auto w-full max-w-lg lg:mx-0 lg:max-w-none">
+            <div className="relative mx-auto w-full max-w-lg p-3 lg:mx-0 lg:max-w-none">
+              <div className="absolute inset-0 border border-[#cfa96a]" />
               <Image
-                className="h-[460px] w-full rounded-[2px] object-cover shadow-2xl lg:h-[540px]"
+                className="relative h-[460px] w-full object-cover shadow-2xl lg:h-[540px]"
                 src="https://images.unsplash.com/photo-1556912167-f556f1f39fdf?auto=format&fit=crop&w=1200&q=88"
                 alt="Warm modern modular kitchen"
                 width={1200}
@@ -194,22 +195,22 @@ function App() {
                 sizes="(min-width: 1024px) 50vw, 100vw"
                 priority
               />
-              <div className="absolute -bottom-5 -left-3 flex items-center gap-3 bg-[#fbfaf7] p-4 shadow-xl sm:-left-7">
-                <span className="grid size-11 place-items-center rounded-full bg-amber-100 text-amber-700">
+              <div className="absolute -bottom-5 -left-1 flex items-center gap-3 bg-[#f8f1e5] p-4 shadow-xl sm:-left-5">
+                <span className="grid size-11 place-items-center bg-[#ead5ae] text-[#85551f]">
                   <Sparkles size={20} />
                 </span>
-                <p className="text-xs leading-5 text-slate-600">
-                  <b className="block text-sm text-slate-800">
-                    Made for your space
+                <p className="text-xs leading-5 text-[#725f4d]">
+                  <b className="block text-sm text-[#3b281c]">
+                    Designed from the grain up
                   </b>
-                  Not a one-size-fits-all solution.
+                  Materials chosen for your home.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        <section id="products" className="section-shell py-24">
+        <section id="products" className="section-shell py-28">
           <div className="section-heading">
             <div>
               <p className="eyebrow">
@@ -226,34 +227,34 @@ function App() {
             </p>
           </div>
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {products.map((product) => (
+            {products.map((product, index) => (
               <article
                 key={product.title}
-                className="group overflow-hidden rounded-sm bg-white shadow-sm ring-1 ring-stone-200/70">
+                className={`group overflow-hidden border border-[#dfd0ba] bg-[#fcfaf5] shadow-[0_16px_40px_-30px_rgba(64,37,16,.65)] ${index === 0 ? "lg:col-span-2" : ""}`}>
                 <div className="relative overflow-hidden">
                   <Image
                     src={product.image}
                     alt={product.title}
-                    className="h-60 w-full object-cover transition duration-700 group-hover:scale-105"
+                    className={`w-full object-cover transition duration-700 group-hover:scale-105 ${index === 0 ? "h-72 lg:h-80" : "h-60"}`}
                     width={900}
                     height={675}
                     sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
                   />
-                  <span className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-slate-700">
+                  <span className="absolute left-4 top-4 bg-[#f8f1e5]/95 px-3 py-1 text-[10px] font-bold uppercase tracking-[.16em] text-[#60411f]">
                     {product.tag}
                   </span>
                 </div>
                 <div className="p-5">
-                  <h3 className="text-lg font-bold text-slate-800">
+                  <h3 className="font-display text-2xl text-[#3b281c]">
                     {product.title}
                   </h3>
-                  <p className="mt-2 min-h-14 text-sm leading-5 text-slate-500">
+                  <p className="mt-2 min-h-14 text-sm leading-5 text-[#786554]">
                     {product.text}
                   </p>
                   <button
                     onClick={() => openQuote(product.title)}
-                    className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-amber-700 transition hover:gap-3">
-                    Quick enquiry <ArrowRight size={16} />
+                    className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-[#85551f] transition hover:gap-3">
+                    Discuss this space <ArrowRight size={16} />
                   </button>
                 </div>
               </article>
@@ -261,27 +262,27 @@ function App() {
           </div>
         </section>
 
-        <section className="bg-slate-800 py-20 text-white">
+        <section className="wood-grain py-24 text-white">
           <div className="mx-auto grid max-w-7xl gap-10 px-5 lg:grid-cols-[.85fr_1.15fr] lg:px-8">
             <div>
-              <p className="eyebrow text-amber-400">
-                <span className="bg-amber-400" /> Plan with confidence
+              <p className="eyebrow text-[#e5c184]">
+                <span className="bg-[#e5c184]" /> Plan with confidence
               </p>
               <h2 className="mt-5 font-display text-4xl leading-tight sm:text-5xl">
                 Get a starting
                 <br />
                 budget in seconds.
               </h2>
-              <p className="mt-5 max-w-sm leading-7 text-slate-300">
+              <p className="mt-5 max-w-sm leading-7 text-[#eadfce]">
                 A quick guide to help you plan. Your exact quote follows a free
                 site measurement.
               </p>
-              <div className="mt-9 flex items-center gap-3 text-sm text-slate-300">
-                <Check size={17} className="text-amber-400" /> No obligation. No
+              <div className="mt-9 flex items-center gap-3 text-sm text-[#eadfce]">
+                <Check size={17} className="text-[#e5c184]" /> No obligation. No
                 hidden costs.
               </div>
             </div>
-            <div className="rounded-sm bg-white p-6 text-slate-800 shadow-2xl sm:p-8">
+            <div className="border border-[#d4ae6c]/60 bg-[#faf6ef] p-6 text-[#35251c] shadow-2xl sm:p-8">
               <div className="grid gap-6 sm:grid-cols-3">
                 <Choice
                   label="1. Room type"
@@ -335,7 +336,7 @@ function App() {
           </div>
         </section>
 
-        <section id="process" className="section-shell py-24">
+        <section id="process" className="section-shell py-28">
           <div className="section-heading">
             <div>
               <p className="eyebrow">
@@ -356,32 +357,32 @@ function App() {
             {process.map(([number, title, text], index) => (
               <div
                 key={number}
-                className="relative border-t border-stone-300 pt-5">
+                className="relative border-t border-[#d4c1a6] pt-5">
                 {index < 4 && (
-                  <div className="absolute right-0 top-[-1px] hidden h-px w-6 translate-x-7 bg-amber-600 md:block" />
+                  <div className="absolute right-0 top-[-1px] hidden h-px w-6 translate-x-7 bg-[#a46b2a] md:block" />
                 )}
-                <span className="font-display text-3xl text-amber-700">
+                <span className="font-display text-3xl text-[#9c6425]">
                   {number}
                 </span>
-                <h3 className="mt-4 text-lg font-bold text-slate-800">
+                <h3 className="mt-4 text-lg font-bold text-[#3b281c]">
                   {title}
                 </h3>
-                <p className="mt-2 text-sm leading-6 text-slate-500">{text}</p>
+                <p className="mt-2 text-sm leading-6 text-[#786554]">{text}</p>
               </div>
             ))}
           </div>
         </section>
 
-        <section id="why-us" className="bg-[#eee9e0] py-24">
+        <section id="why-us" className="bg-[#e8dac3] py-28">
           <div className="section-shell">
             <div className="mx-auto max-w-2xl text-center">
               <p className="eyebrow justify-center">
                 <span /> Made to stand up to life
               </p>
-              <h2 className="mt-4 font-display text-4xl text-slate-800 sm:text-5xl">
+              <h2 className="mt-4 font-display text-4xl text-[#3b281c] sm:text-5xl">
                 Why choose Amogh?
               </h2>
-              <p className="mt-4 leading-7 text-slate-600">
+              <p className="mt-4 leading-7 text-[#715d4b]">
                 The kind of workmanship you notice now — and still appreciate
                 years from now.
               </p>
@@ -409,12 +410,12 @@ function App() {
                   "Dedicated after-sales support across the district.",
                 ],
               ].map(([Icon, title, text]) => (
-                <article key={title} className="bg-[#f9f8f5] p-6">
-                  <span className="grid size-11 place-items-center rounded-full bg-amber-100 text-amber-700">
+                <article key={title} className="border border-[#d6c0a1] bg-[#f7f0e4] p-6">
+                  <span className="grid size-11 place-items-center bg-[#e5cfaa] text-[#85551f]">
                     <Icon size={20} />
                   </span>
-                  <h3 className="mt-5 font-bold text-slate-800">{title}</h3>
-                  <p className="mt-2 text-sm leading-6 text-slate-500">
+                  <h3 className="mt-5 font-bold text-[#3b281c]">{title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-[#786554]">
                     {text}
                   </p>
                 </article>

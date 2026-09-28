@@ -5,26 +5,26 @@ export default function ContactSection({ form, setForm, onSubmit }) {
   const update = (field) => (value) => setForm({ ...form, [field]: value });
 
   return (
-    <section id="contact" className="bg-slate-800 py-20 text-white">
+    <section id="contact" className="bg-[#35251c] py-24 text-white">
       <div className="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-[.78fr_1.22fr] lg:px-8">
         <div>
-          <p className="eyebrow text-amber-400">
-            <span className="bg-amber-400" /> Let's create your space
+          <p className="eyebrow text-[#e5c184]">
+            <span className="bg-[#e5c184]" /> Let's create your space
           </p>
           <h2 className="mt-5 font-display text-4xl leading-tight sm:text-5xl">
             Your dream room
             <br />
             starts with a chat.
           </h2>
-          <div className="mt-9 space-y-5 text-sm text-slate-300">
+          <div className="mt-9 space-y-5 text-sm text-[#eadfce]">
             <p className="flex gap-3">
-              <MapPin className="shrink-0 text-amber-400" size={19} /> 29/56,
+              <MapPin className="shrink-0 text-[#e5c184]" size={19} /> 29/56,
               behind Night College,
               <br />
               Jawaharnagar, Ichalkaranji, Maharashtra 416115
             </p>
             <p className="flex items-center gap-3">
-              <Phone className="text-amber-400" size={18} />
+              <Phone className="text-[#e5c184]" size={18} />
               <a className="hover:text-white" href="tel:+919000000000">
                 +91 9X-XXXX-XXXX
               </a>
@@ -35,7 +35,7 @@ export default function ContactSection({ form, setForm, onSubmit }) {
             </p>
           </div>
           <a
-            className="mt-8 inline-flex items-center gap-2 text-sm font-bold text-amber-400"
+            className="mt-8 inline-flex items-center gap-2 text-sm font-bold text-[#e5c184]"
             href="https://maps.app.goo.gl/MxAB6bH2NyQEoUUS7?g_st=ac"
             target="_blank"
             rel="noopener noreferrer">
@@ -45,13 +45,13 @@ export default function ContactSection({ form, setForm, onSubmit }) {
             title="Amogh Modular Furniture House location map"
             loading="lazy"
             referrerPolicy="strict-origin-when-cross-origin"
-            className="mt-5 h-40 w-full border-0 grayscale contrast-75"
+            className="mt-5 h-40 w-full border border-[#8c6840] grayscale contrast-75"
             src="https://www.google.com/maps?q=Amogh+Modular+Furniture+House,+Jawaharnagar,+Ichalkaranji,+Maharashtra+416115&output=embed"
           />
         </div>
         <form
           onSubmit={onSubmit}
-          className="grid gap-4 rounded-sm bg-white p-6 text-slate-800 sm:grid-cols-2 sm:p-8">
+          className="grid gap-4 border border-[#d4ae6c]/60 bg-[#faf6ef] p-6 text-[#35251c] sm:grid-cols-2 sm:p-8">
           <div className="sm:col-span-2">
             <h3 className="text-2xl font-bold">
               Request your free consultation

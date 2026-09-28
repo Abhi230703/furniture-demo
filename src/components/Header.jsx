@@ -1,5 +1,6 @@
-import { Home, Menu, MessageCircle, Phone, X } from "lucide-react";
+import { Menu, MessageCircle, Phone, X } from "lucide-react";
 import { useState } from "react";
+import BrandMark from "./BrandMark.jsx";
 
 const links = [
   "Home",
@@ -15,20 +16,18 @@ export default function Header({ onWhatsApp }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-40 border-b border-stone-200/70 bg-[#fcfcfa]/90 backdrop-blur-lg">
+    <header className="fixed inset-x-0 top-0 z-40 border-b border-[#d9c6aa]/70 bg-[#f8f3eb]/90 backdrop-blur-lg">
       <div className="mx-auto flex h-[76px] max-w-7xl items-center justify-between px-5 lg:px-8">
         <a
           href="#home"
           className="flex items-center gap-3"
           aria-label="Amogh Modular Furniture House home">
-          <span className="grid size-10 place-items-center rounded-xl bg-slate-800 text-amber-400">
-            <Home size={21} />
-          </span>
+          <BrandMark compact />
           <span className="leading-tight">
-            <b className="block text-[15px] tracking-tight text-slate-800">
-              Amogh Modular
+            <b className="block font-display text-[19px] leading-none tracking-tight text-[#3b281c]">
+              AMOGH
             </b>
-            <small className="block text-[10px] font-semibold uppercase tracking-[.18em] text-amber-700">
+            <small className="mt-1 block text-[8px] font-bold uppercase tracking-[.27em] text-[#98672b]">
               Furniture House
             </small>
           </span>
@@ -39,7 +38,7 @@ export default function Header({ onWhatsApp }) {
           {links.map((item) => (
             <a
               key={item}
-              className="text-sm font-medium text-slate-600 transition hover:text-amber-700"
+              className="text-sm font-medium text-[#705b48] transition hover:text-[#8a5a22]"
               href={hrefFor(item)}>
               {item}
             </a>
@@ -60,7 +59,7 @@ export default function Header({ onWhatsApp }) {
           </a>
         </div>
         <button
-          className="grid size-10 place-items-center rounded-lg text-slate-800 lg:hidden"
+          className="grid size-10 place-items-center text-[#3b281c] lg:hidden"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle navigation"
           aria-controls="mobile-navigation"
@@ -71,13 +70,13 @@ export default function Header({ onWhatsApp }) {
       {menuOpen && (
         <nav
           id="mobile-navigation"
-          className="border-t border-stone-200 bg-white px-5 py-4 lg:hidden"
+          className="border-t border-[#ddcbb4] bg-[#fbf8f2] px-5 py-4 lg:hidden"
           aria-label="Mobile navigation">
           {links.map((item) => (
             <a
               onClick={() => setMenuOpen(false)}
               key={item}
-              className="block border-b border-stone-100 py-3 text-sm font-semibold text-slate-700"
+              className="block border-b border-[#eadfce] py-3 text-sm font-semibold text-[#51371f]"
               href={hrefFor(item)}>
               {item}
             </a>

@@ -4,20 +4,25 @@
 
 @layer base {
   html { scroll-behavior: smooth; }
-  body { @apply bg-[#fcfcfa] font-sans text-slate-800 antialiased; }
-  ::selection { @apply bg-amber-200 text-slate-900; }
+  body { @apply bg-[#f6f1e8] font-sans text-[#35251c] antialiased; }
+  ::selection { @apply bg-[#d9b878] text-[#24160f]; }
 }
 
 @layer components {
   .section-shell { @apply mx-auto max-w-7xl px-5 lg:px-8; }
-  .eyebrow { @apply flex items-center gap-2 text-[11px] font-bold uppercase tracking-[.16em] text-amber-700; }
-  .eyebrow span { @apply h-px w-7 bg-amber-700; }
+  .eyebrow { @apply flex items-center gap-2 text-[10px] font-bold uppercase tracking-[.22em] text-[#9c6b28]; }
+  .eyebrow span { @apply h-px w-7 bg-[#b9853f]; }
   .section-heading { @apply flex flex-col justify-between gap-5 md:flex-row md:items-end; }
-  .section-heading h2 { @apply mt-4 font-display text-4xl leading-tight text-slate-800 sm:text-5xl; }
-  .section-heading > p { @apply max-w-sm text-base leading-7 text-slate-500; }
-  .btn-primary { @apply inline-flex items-center justify-center gap-2 rounded-sm bg-amber-700 px-5 py-3.5 text-sm font-bold text-white transition hover:bg-amber-800 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2; }
-  .btn-secondary { @apply inline-flex items-center justify-center gap-2 rounded-sm border border-slate-300 bg-white px-5 py-3.5 text-sm font-bold text-slate-700 transition hover:border-slate-500 hover:bg-stone-50 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2; }
-  .btn-whatsapp { @apply inline-flex items-center gap-2 rounded-sm bg-[#25D366] px-4 py-2.5 text-xs font-bold text-white transition hover:bg-[#1fb85a]; }
-  .btn-call { @apply inline-flex items-center gap-1.5 text-xs font-bold text-slate-700 transition hover:text-amber-700; }
-  .field { @apply block w-full rounded-sm border border-stone-300 bg-stone-50 px-3 py-2.5 text-sm font-normal text-slate-800 outline-none transition placeholder:text-slate-400 focus:border-amber-600 focus:bg-white focus:ring-2 focus:ring-amber-100; }
+  .section-heading h2 { @apply mt-4 font-display text-4xl leading-[1.08] text-[#35251c] sm:text-5xl; }
+  .section-heading > p { @apply max-w-sm text-base leading-7 text-[#7b6859]; }
+  .btn-primary { @apply inline-flex items-center justify-center gap-2 rounded-none bg-[#8a5a22] px-5 py-3.5 text-sm font-bold text-white transition hover:bg-[#684015] focus:outline-none focus:ring-2 focus:ring-[#b9853f] focus:ring-offset-2; }
+  .btn-secondary { @apply inline-flex items-center justify-center gap-2 rounded-none border border-[#b89b75] bg-[#f8f3eb] px-5 py-3.5 text-sm font-bold text-[#51371f] transition hover:border-[#765027] hover:bg-[#eee3d1] focus:outline-none focus:ring-2 focus:ring-[#b9853f] focus:ring-offset-2; }
+  .btn-whatsapp { @apply inline-flex items-center gap-2 rounded-none bg-[#245a3b] px-4 py-2.5 text-xs font-bold text-white transition hover:bg-[#17412a]; }
+  .btn-call { @apply inline-flex items-center gap-1.5 text-xs font-bold text-[#51371f] transition hover:text-[#8a5a22]; }
+  .field { @apply block w-full rounded-none border border-[#d5c4ad] bg-[#fbf8f2] px-3 py-2.5 text-sm font-normal text-[#35251c] outline-none transition placeholder:text-[#a5927e] focus:border-[#8a5a22] focus:bg-white focus:ring-2 focus:ring-[#ead7b9]; }
+
+  .wood-grain { background-image: linear-gradient(90deg, rgba(35, 20, 12, .76), rgba(35, 20, 12, .34)), url('/images/walnut-grain.png'); background-position: center; background-size: cover; }
+  .wood-inlay { background-image: linear-gradient(rgba(59, 35, 19, .72), rgba(59, 35, 19, .72)), url('/images/walnut-grain.png'); background-position: center; background-size: cover; }
+  .brand-mark { @apply grid size-11 place-items-center border border-[#d4ae6c] text-[#e5c184]; }
+  .brand-mark svg { @apply size-7; }
 }
